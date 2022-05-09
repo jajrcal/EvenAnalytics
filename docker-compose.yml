@@ -13,6 +13,14 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - even-network
+  spark:
+    image: jupyter/pyspark-notebook:latest
+    restart: always
+    container_name: spark
+    ports:
+      - 8888:8888
+    networks:
+      - even-network
 networks:
   even-network:
     driver: bridge
