@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - even-network
+networks:
+  even-network:
+    driver: bridge
