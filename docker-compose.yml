@@ -20,7 +20,7 @@ services:
     ports:
       - 8888:8888
     environment:
-      PASSWORD: password
+       JUPYTER_TOKEN: password
     networks:
       - even-network
 networks:
