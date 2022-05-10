@@ -40,7 +40,7 @@ There are 2 containers running in Docker
     4. Analysis on User demographics
     5. Analyze which users request what
     6. Total $ amounts requested vs what is offered
-3. Ask questions about Data so Analytics Schema can be Organized in a more logical way
+3. Ask questions about data, so Analytics Schema can be Organized in a more logical way
 4. Update column types to be accurate - I auto created this while inserting from the Parquet Files
    1. Update Indexes based on what would be queried often
 5. Complete a write-up of my analysis and findings and include in PDF
