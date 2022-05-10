@@ -32,7 +32,7 @@ There are 2 containers running in Docker
 
 ## Possible Next Steps
 
-1. Clean up Jupyter Notebook
+1. Clean up Jupyter Notebook and Charts
 2. Complete further analysis
     1. Complete analysis on Provider
     2. Review Time difference between first and last click
