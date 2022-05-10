@@ -34,13 +34,13 @@ There are 2 containers running in Docker
 
 1. Clean up Jupyter Notebook
 2. Complete further analysis
-    1. Analysis on Provider
-    2. Time difference between first and last click
-    3. APR and Fees and monthly payments
+    1. Complete analysis on Provider
+    2. Review Time difference between first and last click
+    3. Analyze APR and Fees and monthly payments
     4. Analysis on User demographics
-    5. What Users request what
-    6. Total amounts requested vs what is offered
-    7. Type of Loans
+    5. Analyze which users request what
+    6. Total $ amounts requested vs what is offered
 3. Update column types to be accurate - I auto created this while inserting from the Parquet Files
    1. Update Indexes based on what would be queried often
+4. Complete a write-up of my analysis and findings and include in PDF
    
