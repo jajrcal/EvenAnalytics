@@ -7,20 +7,26 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - even-network
-  spark:
+  notebook:
     image: jupyter/pyspark-notebook:latest
     restart: always
-    container_name: spark
+    container_name: notebook
     ports:
       - 8888:8888
     environment:
        JUPYTER_TOKEN: password
+    volumes:
+      - ./postgresql-42.3.5.jar:/usr/local/spark/jars/postgresql-42.3.5.jar
+      - ./clicks.parquet.gzip:/home/jovyan/clicks.parquet.gzip
+      - ./leads.parquet.gzip:/home/jovyan/leads.parquet.gzip
+      - ./rate_tables.parquet.gzip:/home/jovyan/rate_tables.parquet.gzip
+      - ./EvenAnalyticsNotebook.ipynb:/home/jovyan/EvenAnalyticsNotebook.ipynb
     networks:
       - even-network
 networks:
